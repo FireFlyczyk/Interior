@@ -1,6 +1,11 @@
 const productDom = document.querySelector('.product');
 const url = 'https://course-api.com/javascript-store-single-product';
 
+/**
+ * Fetches a product from the server based on the provided ID.
+ *
+ * @return {Promise} A Promise that resolves to the fetched product data.
+ */
 const fetchProduct = async () => {
   productDom.innerHTML = '<h4 class="product-loading">Loading...</h4>';
   const params = new URLSearchParams(window.location.search);
@@ -14,6 +19,12 @@ const fetchProduct = async () => {
   }
 };
 
+/**
+ * Display a product on the page.
+ *
+ * @param {object} product - The product to be displayed.
+ * @return {void} This function does not return a value.
+ */
 const displayProduct = (product) => {
   const {
     fields: {
@@ -53,6 +64,11 @@ const displayProduct = (product) => {
       </div>`;
 };
 
+/**
+ * Executes the start function asynchronously.
+ *
+ * @return {Promise<void>} A promise that resolves when the start function is completed.
+ */
 const start = async () => {
   const data = await fetchProduct();
 
