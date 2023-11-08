@@ -1,6 +1,6 @@
 # Interior Project
 
-The mini project is a web application for displaying a list of products and detailed information about specific product. It retrieves data from a remote server.
+This mini project is a web application for displaying a list of products and detailed information about specific product. It retrieves data from a remote server.
 
 ## Files
 
